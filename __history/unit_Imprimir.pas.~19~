@@ -1,0 +1,34 @@
+unit unit_Imprimir;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport;
+
+type
+  TfrmImprimir = class(TForm)
+    rpImpressao: TRLReport;
+  private
+
+  public
+    class procedure montardados();
+  end;
+
+//var
+//  frmImprimir: TfrmImprimir;
+
+implementation
+ {$R *.dfm}
+class procedure TfrmImprimir.montardados();
+var frmImprimir: TfrmImprimir;
+begin
+  try
+    frmImprimir := TfrmImprimir.Create(Application);
+    frmImprimir.rpImpressao.Preview;
+  finally
+    //frmImprimir.Free;
+  end;
+end;
+
+end.

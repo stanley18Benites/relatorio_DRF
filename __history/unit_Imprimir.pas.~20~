@@ -1,0 +1,45 @@
+unit unit_Imprimir;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, RLReport, DB, FireDAC.Comp.Client;
+
+type
+  TfrmImprimir = class(TForm)
+    rpImpressao: TRLReport;
+  private
+
+  public
+    class procedure impressao();
+  end;
+
+//var
+//  frmImprimir: TfrmImprimir;
+
+implementation
+{$R *.dfm}
+class procedure TfrmImprimir.impressao(); //funcao para montar os dados
+var frmImprimir: TfrmImprimir;
+begin
+  try
+    frmImprimir := TfrmImprimir.Create(Application);
+    frmImprimir.rpImpressao.Preview;
+  finally
+    frmImprimir.Free;
+  end;
+end;
+
+function montar_dados() : TClientDataSet;
+var cds : TClientDataSet;
+begin
+  try
+
+  finally
+
+  end;
+  result ;
+end;
+
+end.

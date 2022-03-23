@@ -1,0 +1,102 @@
+object frmImprimir: TfrmImprimir
+  Left = 0
+  Top = 0
+  Caption = 'Impressao'
+  ClientHeight = 320
+  ClientWidth = 840
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object rpImpressao: TRLReport
+    Left = 8
+    Top = 0
+    Width = 794
+    Height = 1123
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Arial'
+    Font.Style = []
+    object RLBand1: TRLBand
+      Left = 38
+      Top = 38
+      Width = 718
+      Height = 42
+      BandType = btHeader
+      object RLLabel1: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 718
+        Height = 30
+        Alignment = taCenter
+        AutoSize = False
+        Caption = 'DEMONSTRATIVO DE RESULTADO FINANCEIRO '
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -15
+        Font.Name = 'Arial'
+        Font.Style = [fsBold]
+        Layout = tlCenter
+        ParentFont = False
+      end
+    end
+    object RLBand2: TRLBand
+      Left = 38
+      Top = 80
+      Width = 718
+      Height = 33
+      BandType = btColumnHeader
+      object RLLabel2: TRLLabel
+        Left = 0
+        Top = 0
+        Width = 302
+        Height = 16
+        AutoSize = False
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        Layout = tlCenter
+        ParentFont = False
+      end
+      object labelPeriodo: TRLLabel
+        Left = 322
+        Top = 0
+        Width = 302
+        Height = 16
+        AutoSize = False
+        Caption = 'Per'#237'odo'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Height = -12
+        Font.Name = 'Arial'
+        Font.Style = []
+        Layout = tlCenter
+        ParentFont = False
+      end
+    end
+    object RLBand3: TRLBand
+      Left = 38
+      Top = 113
+      Width = 718
+      Height = 49
+    end
+    object RLBand4: TRLBand
+      Left = 38
+      Top = 162
+      Width = 718
+      Height = 54
+    end
+  end
+  object datasourceImpressao: TDataSource
+    Left = 805
+    Top = 14
+  end
+end

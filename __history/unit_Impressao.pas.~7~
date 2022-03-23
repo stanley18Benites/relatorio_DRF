@@ -1,0 +1,26 @@
+unit unit_Impressao;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs;
+
+type
+  Tfrm_Impressao = class(TForm)
+  private
+    { Private declarations }
+  public
+    class procedure montar_dados();
+  end;
+
+implementation
+
+class procedure Tfrm_Impressao.montar_dados();
+var frm_Impressao: Tfrm_Impressao;
+begin
+  ShowMessage('oi');
+  //frm_Impressao:= Tfrm_Impressao.Create(Application);
+end;
+
+end.
